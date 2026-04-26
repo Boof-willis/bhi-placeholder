@@ -30,7 +30,6 @@
 html{
   background:var(--ink);
   scroll-behavior:smooth;
-  overscroll-behavior-y:none;
 }
 body{
   font-family:'Inter',sans-serif;
@@ -42,7 +41,6 @@ body{
   width:100%;
   -webkit-font-smoothing:antialiased;
   position:relative;
-  overscroll-behavior-y:none;
 }
 
 /* Global noise grain */
@@ -145,7 +143,7 @@ header.nav{
   body{padding-top:73px}
   .brand .bn small{display:none}
   .brand{padding:14px 16px;border-right:0}
-  .nav-inner{grid-template-columns:1fr auto}
+  .nav-inner{grid-template-columns:1fr auto;padding-right:16px}
   .nav-cta{padding:14px 16px;font-size:10px}
 }
 
@@ -219,9 +217,10 @@ header.nav{
   transition:transform .12s, background .15s;
 }
 .btn:hover{background:var(--accent);transform:translate(-2px,-2px)}
-.btn.ghost{background:var(--paper);color:var(--ink);margin-left:-1px}
+.btn.ghost{background:var(--paper);color:var(--ink);margin-left:-1px;white-space:nowrap}
 .btn.ghost:hover{background:var(--ink);color:var(--paper);transform:translate(-2px,-2px)}
 .btn .arr{font-family:'JetBrains Mono',monospace;font-weight:700}
+.btn.ghost .arr{font-size:16px;line-height:1}
 
 .hero-meta{
   border-top:1px solid var(--ink);
@@ -314,7 +313,12 @@ header.nav{
   .hero h1{font-size:clamp(2.6rem,12vw,4rem)}
   .hero-lede{font-size:15px}
   .btn{padding:16px 20px;font-size:11px;flex:1;justify-content:center}
-  .hero-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .hero-actions{display:grid;grid-template-columns:minmax(0,1fr) max-content;width:100%}
+  .btn.ghost{gap:8px;letter-spacing:.08em}
+}
+@media(max-width:360px){
+  .hero-actions{grid-template-columns:1fr}
+  .btn.ghost{margin-left:0}
 }
 
 /* ===== SECTION SCAFFOLD ===== */
@@ -582,36 +586,95 @@ section{border-bottom:1px solid var(--ink)}
 .cta-info dt{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .cta-info dd{font-family:'Archivo Black',sans-serif;font-size:18px;letter-spacing:-.01em}
 
-.cta-r{padding:64px 32px 50px}
+.cta-r{padding:64px 32px 50px;display:flex;flex-direction:column}
 .cta-r .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
 .cta-r h3{font-family:'Archivo Black',sans-serif;font-size:24px;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px}
-.form{display:grid;gap:1px;background:var(--ink-3);border:1px solid var(--ink-3)}
-.field{background:var(--ink);padding:0;display:grid;grid-template-columns:120px 1fr;align-items:stretch}
-.field label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding:16px 14px;border-right:1px solid var(--ink-3);display:flex;align-items:center;background:#1a1a1a}
-.field input,.field select,.field textarea{
-  background:var(--ink);color:var(--paper);
-  border:0;outline:0;
-  padding:16px 14px;
-  font-family:'JetBrains Mono',monospace;font-size:13px;
-  width:100%;
+
+/* ===== MULTI-STEP SURVEY ===== */
+.survey{
+  border:1px solid var(--ink-3);
+  background:#0e0e0e;
+  display:flex;flex-direction:column;
 }
-.field input:focus,.field select:focus,.field textarea:focus{background:#1c1c1c;color:var(--accent)}
-.field textarea{min-height:90px;resize:vertical;font-family:'Inter',sans-serif;letter-spacing:0;text-transform:none}
-.cta-r .submit{
-  margin-top:1px;
-  width:100%;
-  padding:22px 24px;
-  background:var(--accent);color:var(--paper);
+.survey-progress{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px 18px;border-bottom:1px solid var(--ink-3);
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);
+}
+.survey-progress .pct{color:var(--accent);font-weight:700}
+.survey-bar{flex:1;height:2px;background:var(--ink-3);position:relative;overflow:hidden}
+.survey-bar-fill{position:absolute;inset:0;width:20%;background:var(--accent);transition:width .35s ease}
+.survey-step{display:none;padding:28px 22px 8px}
+.survey-step.is-active{display:block;animation:stepIn .25s ease}
+@keyframes stepIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.survey-step .q-num{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.survey-step h4{font-family:'Archivo Black',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:-.02em;line-height:1;color:var(--paper);margin-bottom:18px}
+.survey-step .help{font-family:'Inter',sans-serif;font-size:13px;line-height:1.5;color:#c8c8c2;margin-bottom:18px}
+
+.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.option{
+  border:1px solid var(--ink-3);
+  background:#141414;
+  padding:14px 14px;
+  cursor:pointer;
+  display:flex;flex-direction:column;gap:6px;
+  transition:background .15s, border-color .15s, transform .12s;
+}
+.option:hover{background:#1a1a1a;border-color:var(--accent)}
+.option input{position:absolute;opacity:0;pointer-events:none}
+.option .opt-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.option .opt-name{font-family:'Archivo Black',sans-serif;font-size:14px;letter-spacing:-.01em;text-transform:uppercase;color:var(--paper);line-height:1.05}
+.option:has(input:checked){background:var(--accent);border-color:var(--accent)}
+.option:has(input:checked) .opt-tag{color:var(--ink)}
+.option:has(input:checked) .opt-name{color:var(--ink)}
+
+.input-stack{display:flex;flex-direction:column;gap:10px}
+.input-row{display:grid;grid-template-columns:110px 1fr;align-items:stretch;border:1px solid var(--ink-3);background:var(--ink)}
+.input-row label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding:14px 12px;border-right:1px solid var(--ink-3);display:flex;align-items:center;background:#1a1a1a}
+.input-row input,.input-row textarea{
+  background:var(--ink);color:var(--paper);border:0;outline:0;
+  padding:14px 12px;
+  font-family:'JetBrains Mono',monospace;font-size:13px;width:100%;
+}
+.input-row input:focus,.input-row textarea:focus{background:#1c1c1c;color:var(--accent)}
+.input-row textarea{min-height:120px;resize:vertical;font-family:'Inter',sans-serif;letter-spacing:0;text-transform:none}
+
+.survey-nav{
+  display:grid;grid-template-columns:auto 1fr auto;gap:1px;
+  background:var(--ink-3);border-top:1px solid var(--ink-3);
+}
+.survey-nav button{
   border:0;cursor:pointer;
-  font-family:'JetBrains Mono',monospace;
-  font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
-  display:flex;justify-content:space-between;align-items:center;
-  transition:background .15s;
+  background:#0e0e0e;color:var(--paper);
+  padding:18px 22px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  transition:background .15s, color .15s;
 }
-.cta-r .submit:hover{background:var(--paper);color:var(--ink)}
+.survey-nav button:disabled{opacity:.3;cursor:not-allowed}
+.survey-nav .spacer{background:#0e0e0e}
+.survey-nav .next,.survey-nav .submit{background:var(--accent);color:var(--paper)}
+.survey-nav .next:hover,.survey-nav .submit:hover{background:var(--paper);color:var(--ink)}
+.survey-nav .back:hover{background:#1a1a1a;color:var(--accent)}
+
+.survey-done{display:none;padding:48px 24px;text-align:center}
+.survey-done h4{font-family:'Archivo Black',sans-serif;font-size:26px;text-transform:uppercase;letter-spacing:-.02em;line-height:1;color:var(--accent);margin-bottom:14px}
+.survey-done p{font-family:'Inter',sans-serif;font-size:14px;line-height:1.5;color:#c8c8c2}
+.survey.is-done .survey-step,
+.survey.is-done .survey-progress,
+.survey.is-done .survey-nav{display:none}
+.survey.is-done .survey-done{display:block}
+
 .cta-r .fineprint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:14px;text-align:right}
+
 @media(max-width:980px){.cta-grid{grid-template-columns:1fr}.cta-l{border-right:0;border-bottom:1px solid var(--ink-3)}}
-@media(max-width:520px){.field{grid-template-columns:1fr}.field label{border-right:0;border-bottom:1px solid var(--ink-3);padding:10px 14px}.cta-l,.cta-r{padding:40px 18px}}
+@media(max-width:520px){
+  .cta-l,.cta-r{padding:40px 18px}
+  .survey-step{padding:22px 16px 6px}
+  .input-row{grid-template-columns:1fr}
+  .input-row label{border-right:0;border-bottom:1px solid var(--ink-3);padding:10px 12px}
+  .survey-nav button{padding:16px 14px;font-size:10px;letter-spacing:.14em}
+}
 
 /* ===== FOOTER ===== */
 footer{
@@ -668,8 +731,6 @@ footer{
   </div>
   <div class="right">
     <span class="hide-sm">Mon&ndash;Sat 7am&ndash;6pm</span>
-    <span class="div hide-sm">|</span>
-    <span>+1 (385) 377-7537</span>
   </div>
 </div>
 
@@ -1052,39 +1113,77 @@ footer{
     <div class="cta-r">
       <span class="lbl">Request Form</span>
       <h3>Tell Us About Your Project</h3>
-      <form class="form" onsubmit="event.preventDefault(); this.querySelector('.submit').textContent='&#10003; SENT — WE WILL CALL WITHIN 24HR';">
-        <div class="field">
-          <label for="f-name">[01] Name</label>
-          <input id="f-name" type="text" required placeholder="FULL NAME">
+      <form id="survey" class="survey" novalidate>
+        <div class="survey-progress">
+          <span>Step <span id="sv-current">01</span> / 05</span>
+          <span class="survey-bar"><span class="survey-bar-fill" id="sv-fill"></span></span>
+          <span class="pct"><span id="sv-pct">20</span>%</span>
         </div>
-        <div class="field">
-          <label for="f-phone">[02] Phone</label>
-          <input id="f-phone" type="tel" required placeholder="(801) 555-0000">
+
+        <fieldset class="survey-step is-active" data-step="1" data-required="project">
+          <div class="q-num">[01] Project Type</div>
+          <h4>What kind of project is this?</h4>
+          <div class="option-grid">
+            <label class="option"><input type="radio" name="project" value="Replacement"><span class="opt-tag">A-01</span><span class="opt-name">Replacement<br>Windows</span></label>
+            <label class="option"><input type="radio" name="project" value="New Construction"><span class="opt-tag">A-02</span><span class="opt-name">New<br>Construction</span></label>
+            <label class="option"><input type="radio" name="project" value="Energy Retrofit"><span class="opt-tag">A-03</span><span class="opt-name">Energy<br>Retrofit</span></label>
+            <label class="option"><input type="radio" name="project" value="Custom Glass"><span class="opt-tag">A-04</span><span class="opt-name">Custom<br>Glass</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-step" data-step="2" data-required="qty">
+          <div class="q-num">[02] Window Count</div>
+          <h4>Roughly how many openings?</h4>
+          <div class="option-grid">
+            <label class="option"><input type="radio" name="qty" value="1-3"><span class="opt-tag">B-01</span><span class="opt-name">1&ndash;3<br>Windows</span></label>
+            <label class="option"><input type="radio" name="qty" value="4-9"><span class="opt-tag">B-02</span><span class="opt-name">4&ndash;9<br>Windows</span></label>
+            <label class="option"><input type="radio" name="qty" value="10-19"><span class="opt-tag">B-03</span><span class="opt-name">10&ndash;19<br>Windows</span></label>
+            <label class="option"><input type="radio" name="qty" value="20+"><span class="opt-tag">B-04</span><span class="opt-name">20+ /<br>Whole House</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-step" data-step="3" data-required="timeline">
+          <div class="q-num">[03] Timeline</div>
+          <h4>When are you hoping to install?</h4>
+          <div class="option-grid">
+            <label class="option"><input type="radio" name="timeline" value="ASAP"><span class="opt-tag">C-01</span><span class="opt-name">ASAP<br>&lt; 30 Days</span></label>
+            <label class="option"><input type="radio" name="timeline" value="1-3 mo"><span class="opt-tag">C-02</span><span class="opt-name">1&ndash;3<br>Months</span></label>
+            <label class="option"><input type="radio" name="timeline" value="3-6 mo"><span class="opt-tag">C-03</span><span class="opt-name">3&ndash;6<br>Months</span></label>
+            <label class="option"><input type="radio" name="timeline" value="Exploring"><span class="opt-tag">C-04</span><span class="opt-name">Just<br>Exploring</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-step" data-step="4" data-required="contact">
+          <div class="q-num">[04] Contact</div>
+          <h4>Where should Brady reach you?</h4>
+          <div class="input-stack">
+            <div class="input-row"><label for="f-name">Name</label><input id="f-name" name="name" type="text" placeholder="FULL NAME"></div>
+            <div class="input-row"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" placeholder="(801) 555-0000"></div>
+            <div class="input-row"><label for="f-email">Email</label><input id="f-email" name="email" type="email" placeholder="YOU@DOMAIN.COM"></div>
+            <div class="input-row"><label for="f-zip">Zip</label><input id="f-zip" name="zip" type="text" placeholder="84020"></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="survey-step" data-step="5">
+          <div class="q-num">[05] Notes (Optional)</div>
+          <h4>Anything else we should know?</h4>
+          <p class="help">Fogged seals, rot, energy goals, target date — whatever helps Brady prep for the on-site assessment.</p>
+          <div class="input-stack">
+            <div class="input-row"><label for="f-notes">Notes</label><textarea id="f-notes" name="notes" placeholder="Tell us about the project…"></textarea></div>
+          </div>
+        </fieldset>
+
+        <div class="survey-done">
+          <h4>&#10003; Request Sent</h4>
+          <p>Thanks. Brady will call within 24 hours to schedule your free on-site assessment.</p>
         </div>
-        <div class="field">
-          <label for="f-email">[03] Email</label>
-          <input id="f-email" type="email" required placeholder="YOU@DOMAIN.COM">
+
+        <div class="survey-nav">
+          <button type="button" class="back" id="sv-back" disabled>&larr; Back</button>
+          <span class="spacer"></span>
+          <button type="button" class="next" id="sv-next">Next &rarr;</button>
+          <button type="submit" class="submit" id="sv-submit" style="display:none">Send Request &rarr;</button>
         </div>
-        <div class="field">
-          <label for="f-zip">[04] Zip</label>
-          <input id="f-zip" type="text" required placeholder="84020">
-        </div>
-        <div class="field">
-          <label for="f-count">[05] Window Qty</label>
-          <select id="f-count" required>
-            <option value="">&mdash; SELECT &mdash;</option>
-            <option>1&ndash;3 WINDOWS</option>
-            <option>4&ndash;9 WINDOWS</option>
-            <option>10&ndash;19 WINDOWS</option>
-            <option>20+ / WHOLE HOUSE</option>
-            <option>NEW CONSTRUCTION</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-notes">[06] Notes</label>
-          <textarea id="f-notes" placeholder="Tell us about the project — fogged seals, rot, energy goals, target date…"></textarea>
-        </div>
-        <button class="submit" type="submit">Send Request <span>&rarr;</span></button>
       </form>
       <div class="fineprint">We never share contact data &middot; spam-free since 2017</div>
     </div>
@@ -1144,6 +1243,86 @@ footer{
 </footer>
 
 <script>
+// multi-step survey
+(function(){
+  var form = document.getElementById('survey');
+  if(!form) return;
+  var steps = form.querySelectorAll('.survey-step');
+  var total = steps.length;
+  var idx = 0;
+  var back = document.getElementById('sv-back');
+  var next = document.getElementById('sv-next');
+  var submit = document.getElementById('sv-submit');
+  var fill = document.getElementById('sv-fill');
+  var pct = document.getElementById('sv-pct');
+  var current = document.getElementById('sv-current');
+
+  function pad(n){ return n < 10 ? '0'+n : ''+n; }
+
+  function render(){
+    steps.forEach(function(s, i){ s.classList.toggle('is-active', i === idx); });
+    var p = Math.round(((idx+1)/total)*100);
+    fill.style.width = p + '%';
+    pct.textContent = p;
+    current.textContent = pad(idx+1);
+    back.disabled = idx === 0;
+    var isLast = idx === total - 1;
+    next.style.display = isLast ? 'none' : '';
+    submit.style.display = isLast ? '' : 'none';
+  }
+
+  function validateStep(){
+    var step = steps[idx];
+    var key = step.getAttribute('data-required');
+    if(!key) return true;
+    if(key === 'contact'){
+      var inputs = step.querySelectorAll('input');
+      var ok = true;
+      inputs.forEach(function(inp){
+        if(!inp.value.trim()){ ok = false; }
+      });
+      var email = step.querySelector('input[type=email]');
+      if(email && email.value && !/^\S+@\S+\.\S+$/.test(email.value)) ok = false;
+      if(!ok){
+        inputs.forEach(function(inp){
+          if(!inp.value.trim()) inp.style.outline = '1px solid '+(getComputedStyle(document.documentElement).getPropertyValue('--accent')||'#7D6B47');
+          else inp.style.outline = '';
+        });
+      }
+      return ok;
+    }
+    var picked = step.querySelector('input[name="'+key+'"]:checked');
+    return !!picked;
+  }
+
+  next.addEventListener('click', function(){
+    if(!validateStep()){
+      next.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:250});
+      return;
+    }
+    if(idx < total - 1){ idx++; render(); }
+  });
+  back.addEventListener('click', function(){
+    if(idx > 0){ idx--; render(); }
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    form.classList.add('is-done');
+  });
+
+  // auto-advance when picking a radio option (steps 1-3)
+  form.querySelectorAll('input[type=radio]').forEach(function(r){
+    r.addEventListener('change', function(){
+      setTimeout(function(){
+        if(idx < 2){ next.click(); }
+      }, 180);
+    });
+  });
+
+  render();
+})();
+
 // counter animation on stats
 (function(){
   var stats = document.querySelectorAll('.stat .n');
