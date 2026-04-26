@@ -93,6 +93,15 @@ header.nav{
   background:var(--paper);
   position:sticky;top:0;z-index:100;
 }
+header.nav::before{
+  content:'';
+  position:fixed;
+  left:0;right:0;top:0;
+  height:env(safe-area-inset-top,0px);
+  background:var(--paper);
+  z-index:-1;
+  pointer-events:none;
+}
 .nav-inner{
   max-width:1440px;margin:0 auto;
   display:grid;
