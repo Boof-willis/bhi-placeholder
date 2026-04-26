@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berry Home Improvements — Window Replacement & Installation, Salt Lake & Utah County</title>
+<meta name="description" content="Specialist window replacement, installation, and energy-efficient retrofits for Utah homes. Family-owned. Free in-home assessment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="68869ed879319256ca2ddb5d.png">
+<style>
+:root{
+  --paper:#EAE8E3;
+  --paper-2:#DEDBD3;
+  --ink:#0A0A0A;
+  --ink-2:#3A3A3A;
+  --ink-3:#6E6E68;
+  --accent:#7D6B47;
+  --accent-2:#5A4D33;
+  --hazard:#C0392B;
+  --rule:#0A0A0A;
+  --gap:1px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0!important}
+html{background:var(--paper);scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.5;
+  overflow-x:hidden;
+  width:100%;
+  -webkit-font-smoothing:antialiased;
+  position:relative;
+}
+
+/* Global noise grain */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  pointer-events:none;
+  z-index:9999;
+  opacity:.06;
+  mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
+}
+
+.mono{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:500}
+.macro{font-family:'Archivo Black','Inter',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.85}
+hr{border:0;border-top:1px solid var(--ink)}
+hr.thick{border-top:2px solid var(--ink)}
+hr.accent{border-top:2px solid var(--accent)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ===== TOP METADATA STRIP ===== */
+.strip{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  padding:8px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  white-space:nowrap;
+  overflow:hidden;
+  width:100%;
+}
+.strip .left,.strip .right{display:flex;gap:24px;align-items:center}
+.strip .blink{display:inline-block;width:6px;height:6px;background:var(--accent);margin-right:6px;vertical-align:middle;animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+.strip .div{color:var(--ink-3)}
+@media(max-width:840px){.strip .hide-sm{display:none}}
+
+/* ===== HEADER ===== */
+header.nav{
+  border-bottom:1px solid var(--ink);
+  background:var(--paper);
+  position:sticky;top:0;z-index:100;
+}
+.nav-inner{
+  max-width:1440px;margin:0 auto;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:0;
+}
+.brand{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 24px;
+  border-right:1px solid var(--ink);
+}
+.brand img{height:46px;width:auto}
+.brand .bn{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.02em;line-height:1}
+.brand .bn small{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.18em;color:var(--ink-3);margin-top:4px}
+.nav-mid{display:flex;justify-content:center;gap:0}
+.nav-mid a{
+  padding:18px 22px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;text-transform:uppercase;letter-spacing:.14em;
+  border-left:1px solid var(--ink);
+  transition:background .15s;
+}
+.nav-mid a:last-child{border-right:1px solid var(--ink)}
+.nav-mid a:hover{background:var(--ink);color:var(--paper)}
+.nav-cta{
+  background:var(--ink);color:var(--paper);
+  padding:18px 26px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;text-transform:uppercase;letter-spacing:.14em;
+  display:flex;align-items:center;gap:10px;
+  transition:background .15s;
+}
+.nav-cta:hover{background:var(--accent);color:var(--paper)}
+.nav-cta .dot{width:8px;height:8px;background:var(--accent);display:inline-block}
+.nav-cta:hover .dot{background:var(--ink)}
+@media(max-width:980px){.nav-mid{display:none}}
+@media(max-width:520px){
+  .brand .bn small{display:none}
+  .brand{padding:14px 16px;border-right:0}
+  .nav-inner{grid-template-columns:1fr auto}
+  .nav-cta{padding:14px 16px;font-size:10px}
+}
+
+/* ===== HERO ===== */
+.hero{
+  border-bottom:1px solid var(--ink);
+  position:relative;
+  overflow:hidden;
+}
+@media(min-width:1081px){
+  .hero{
+    height:calc(100vh - 110px);
+    min-height:600px;
+    max-height:900px;
+  }
+  .hero-grid{
+    height:100%;
+  }
+}
+.hero-grid{
+  max-width:1440px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 380px;
+}
+.hero-main{
+  padding:6vh 24px 0 24px;
+  border-right:1px solid var(--ink);
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.hero-tag{
+  display:inline-flex;gap:14px;align-items:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;text-transform:uppercase;letter-spacing:.14em;
+  margin-bottom:max(24px, 4vh);
+}
+.hero-tag .br{color:var(--accent)}
+.hero h1{
+  font-family:'Archivo Black',sans-serif;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-.045em;
+  line-height:.86;
+  font-size:clamp(3.4rem, 8vw, 9.5rem);
+  margin-bottom:max(20px, 3vh);
+  color:var(--ink);
+}
+.hero h1 em{font-style:normal;color:var(--accent);position:relative;display:inline-block}
+.hero h1 em::after{
+  content:'';position:absolute;left:0;right:0;bottom:.04em;height:.07em;
+  background:var(--accent);opacity:.25;
+}
+.hero-lede{
+  font-size:17px;line-height:1.45;max-width:640px;
+  color:var(--ink-2);
+  margin-bottom:max(30px, 4vh);
+  font-weight:400;
+}
+.hero-lede b{color:var(--ink);font-weight:700}
+.hero-actions{display:flex;gap:0;flex-wrap:wrap;margin-bottom:auto}
+.btn{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:20px 28px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;text-transform:uppercase;letter-spacing:.14em;
+  font-weight:700;
+  border:1px solid var(--ink);
+  background:var(--ink);color:var(--paper);
+  transition:transform .12s, background .15s;
+}
+.btn:hover{background:var(--accent);transform:translate(-2px,-2px)}
+.btn.ghost{background:var(--paper);color:var(--ink);margin-left:-1px}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);transform:translate(-2px,-2px)}
+.btn .arr{font-family:'JetBrains Mono',monospace;font-weight:700}
+
+.hero-meta{
+  border-top:1px solid var(--ink);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--ink);
+  margin:50px -24px 0 -24px;
+  width:calc(100% + 48px);
+}
+@media(min-width:1081px){
+  .hero-meta{
+    margin-top: 40px;
+  }
+}
+.hero-meta > div{background:var(--paper);padding:18px 20px}
+.hero-meta dt{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-3);margin-bottom:6px}
+.hero-meta dd{font-family:'Archivo Black',sans-serif;font-size:24px;letter-spacing:-.02em;color:var(--ink)}
+.hero-meta dd small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:11px;letter-spacing:0;color:var(--ink-3);text-transform:none;margin-top:2px}
+
+/* Hero side panel — window cross section */
+.hero-side{
+  background:var(--paper-2);
+  position:relative;
+  display:flex;flex-direction:column;
+}
+.hero-side-head{
+  padding:18px 22px;
+  border-bottom:1px solid var(--ink);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;text-transform:uppercase;letter-spacing:.14em;
+}
+.hero-side-head .pulse{display:flex;gap:6px;align-items:center}
+.hero-side-head .pulse i{display:block;width:6px;height:6px;background:var(--accent);animation:blink 1.4s steps(2) infinite}
+
+.window-illo{
+  flex:1;
+  position:relative;
+  background: url('hero-window.png') center/cover no-repeat;
+  margin:22px;
+  border:2px solid var(--ink);
+  display:block;
+  min-height:380px;
+}
+.window-pane{
+  display:none;
+}
+.window-pane::after{
+  content:'';position:absolute;
+  top:-50%;left:-30%;width:60%;height:200%;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.6) 50%,transparent 60%);
+  transform:rotate(15deg);
+  animation:shine 6s ease-in-out infinite;
+}
+@keyframes shine{0%,100%{transform:translateX(0) rotate(15deg)}50%{transform:translateX(220%) rotate(15deg)}}
+
+.spec-call{
+  position:absolute;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px;text-transform:uppercase;letter-spacing:.12em;
+  background:var(--paper);border:1px solid var(--ink);
+  padding:5px 8px;
+  white-space:nowrap;
+  z-index:2;
+}
+.spec-call .v{color:var(--accent);font-weight:700}
+.spec-call::before{content:'';position:absolute;background:var(--ink);}
+.spec-1{top:14px;left:14px}
+.spec-2{bottom:14px;right:14px}
+.spec-3{top:50%;left:50%;transform:translate(-50%,-50%);background:var(--ink);color:var(--paper)}
+
+.hero-side-foot{
+  padding:18px 22px;
+  border-top:1px solid var(--ink);
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink);
+  margin:0;
+}
+.hero-side-foot div{background:var(--paper-2);padding:14px}
+.hero-side-foot dt{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.hero-side-foot dd{font-family:'Archivo Black',sans-serif;font-size:20px;letter-spacing:-.02em}
+
+@media(max-width:1080px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-main{border-right:0;border-bottom:1px solid var(--ink);min-height:auto}
+}
+@media(max-width:520px){
+  .hero-main{padding:40px 16px 0}
+  .hero-meta{grid-template-columns:1fr;margin:40px -16px 0 -16px;width:calc(100% + 32px)}
+  .hero h1{font-size:clamp(2.6rem,12vw,4rem)}
+  .hero-lede{font-size:15px}
+  .btn{padding:16px 20px;font-size:11px;flex:1;justify-content:center}
+  .hero-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+}
+
+/* ===== SECTION SCAFFOLD ===== */
+section{border-bottom:1px solid var(--ink)}
+.sec-head{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:end;gap:32px;
+  padding:54px 24px 28px;
+}
+.sec-head .num{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(3rem,7vw,5.5rem);
+  letter-spacing:-.04em;line-height:.85;
+  color:var(--accent);
+}
+.sec-head .lbl{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-3);margin-bottom:8px;
+}
+.sec-head h2{
+  font-family:'Archivo Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:-.035em;
+  line-height:.88;
+  font-size:clamp(2rem,4.5vw,4.2rem);
+}
+.sec-head .right{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);
+  text-align:right;
+  white-space:nowrap;
+}
+@media(max-width:760px){
+  .sec-head{grid-template-columns:auto 1fr;gap:18px;padding:40px 16px 22px}
+  .sec-head .right{display:none}
+}
+
+/* ===== SPEC TABLE ===== */
+.spec-wrap{max-width:1440px;margin:0 auto;padding:0 24px 64px}
+.spec-table{
+  border:1px solid var(--ink);
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;
+  background:var(--ink);
+  gap:1px;
+}
+.spec-table > *{background:var(--paper);padding:14px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.spec-table .h{background:var(--ink);color:var(--paper);font-weight:700;letter-spacing:.14em;font-size:10px;padding:12px 16px}
+.spec-table .name{font-family:'Archivo Black',sans-serif;font-size:13px;letter-spacing:-.01em;text-transform:uppercase}
+.spec-table .v{color:var(--accent);font-weight:700;font-size:13px}
+@media(max-width:760px){
+  .spec-wrap{padding:0 0 40px}
+  .spec-table{grid-template-columns:1fr 1fr;font-size:10px}
+  .spec-table .h:nth-child(n+3),.spec-table > div:nth-child(5n+3),.spec-table > div:nth-child(5n+4),.spec-table > div:nth-child(5n+5){display:none}
+}
+
+/* ===== CAPABILITIES ===== */
+.caps{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--ink);
+  border-top:1px solid var(--ink);
+}
+.cap{
+  background:var(--paper);
+  padding:36px 26px 32px;
+  display:flex;flex-direction:column;gap:18px;
+  position:relative;
+  min-height:340px;
+  transition:background .2s;
+}
+.cap:hover{background:var(--paper-2)}
+.cap .id{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--ink-3);text-transform:uppercase}
+.cap .id .dot{display:inline-block;width:6px;height:6px;background:var(--accent);margin-right:8px;vertical-align:middle}
+.cap-img{width:100%;height:160px;object-fit:cover;border:1px solid var(--ink)}
+.cap h3{
+  font-family:'Archivo Black',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:-.025em;
+  line-height:.92;
+  font-size:28px;
+  color:var(--ink);
+}
+.cap p{font-size:14px;line-height:1.5;color:var(--ink-2);max-width:280px}
+.cap ul{list-style:none;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.cap ul li{padding:6px 0;border-top:1px solid var(--paper-2);display:flex;justify-content:space-between}
+.cap ul li:first-child{border-top:1px solid var(--ink)}
+.cap ul li b{color:var(--accent);font-weight:700}
+.cap .crosshair{
+  position:absolute;width:14px;height:14px;
+  background:
+    linear-gradient(var(--ink),var(--ink)) no-repeat center / 14px 1px,
+    linear-gradient(var(--ink),var(--ink)) no-repeat center / 1px 14px;
+}
+.cap .ch-tl{top:-7px;left:-7px}
+.cap .ch-tr{top:-7px;right:-7px}
+.cap .ch-bl{bottom:-7px;left:-7px}
+.cap .ch-br{bottom:-7px;right:-7px}
+@media(max-width:1080px){.caps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.caps{grid-template-columns:1fr}}
+
+/* ===== STATS ===== */
+.stats{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--ink);
+  border-top:1px solid var(--ink);
+}
+.stat{
+  background:var(--paper);
+  padding:38px 28px 30px;
+  display:flex;flex-direction:column;gap:8px;
+}
+.stat .n{font-family:'Archivo Black',sans-serif;font-size:clamp(3rem,6vw,5rem);letter-spacing:-.04em;line-height:.9}
+.stat .n sup{color:var(--accent);font-size:.5em;vertical-align:super}
+.stat .l{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.stat .b{margin-top:auto;font-size:13px;line-height:1.4;color:var(--ink-2);padding-top:14px;border-top:1px solid var(--paper-2)}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== STYLES CATALOG ===== */
+.catalog{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(6,1fr);gap:1px;
+  background:var(--ink);
+  border-top:1px solid var(--ink);
+}
+.style{
+  background:var(--paper);
+  padding:24px 16px 20px;
+  display:flex;flex-direction:column;gap:14px;
+  position:relative;
+  cursor:pointer;
+  transition:background .15s;
+}
+.style:hover{background:var(--ink);color:var(--paper)}
+.style:hover .style-svg{filter:invert(1)}
+.style:hover .lbl{color:var(--accent)}
+.style .style-svg{
+  aspect-ratio:1/1.2;
+  border:1px solid var(--ink);
+  background:var(--paper-2);
+  display:flex;align-items:center;justify-content:center;
+  transition:filter .15s;
+}
+.style .lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.style .nm{font-family:'Archivo Black',sans-serif;font-size:15px;letter-spacing:-.01em;text-transform:uppercase;line-height:.95}
+@media(max-width:980px){.catalog{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){
+  .catalog{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-padding:16px;
+    padding-bottom:1px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .catalog::-webkit-scrollbar{display:none}
+  .style{
+    flex:0 0 45%;
+    scroll-snap-align:start;
+    border-right:1px solid var(--ink);
+  }
+  .style:last-child{border-right:0}
+}
+
+/* ===== PROCESS ===== */
+.process{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--ink);
+  border-top:1px solid var(--ink);
+}
+.step{
+  background:var(--paper);
+  padding:30px 22px;
+  display:flex;flex-direction:column;gap:14px;
+  min-height:260px;
+}
+.step .stnum{font-family:'Archivo Black',sans-serif;font-size:60px;letter-spacing:-.04em;line-height:.85;color:var(--accent)}
+.step .stnum sup{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--ink-3);vertical-align:super}
+.step h4{font-family:'Archivo Black',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.02em;line-height:.95}
+.step p{font-size:13px;line-height:1.5;color:var(--ink-2)}
+.step .est{margin-top:auto;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);padding-top:12px;border-top:1px solid var(--paper-2)}
+@media(max-width:1080px){.process{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.process{grid-template-columns:1fr}}
+
+/* ===== TESTIMONIALS ===== */
+.tests{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);
+  border-top:1px solid var(--ink);
+}
+.test{
+  background:var(--paper);
+  padding:34px 26px;
+  display:flex;flex-direction:column;gap:18px;
+}
+.test .quote{font-family:'Archivo Black',sans-serif;color:var(--accent);font-size:48px;line-height:.6;height:24px}
+.test p{font-size:15px;line-height:1.5;color:var(--ink)}
+.test .who{margin-top:auto;padding-top:16px;border-top:1px solid var(--paper-2);display:flex;justify-content:space-between;align-items:end;gap:12px}
+.test .who .nm{font-family:'Archivo Black',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:-.01em}
+.test .who .meta{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);text-align:right}
+.test .stars{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:13px;letter-spacing:.1em}
+@media(max-width:980px){.tests{grid-template-columns:1fr}}
+
+/* ===== ABOUT ===== */
+.about{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-top:1px solid var(--ink);
+}
+.about-img-wrap{
+  padding:54px 32px;
+  border-right:1px solid var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.about-img{
+  width:100%;
+  height:auto;
+  border:1px solid var(--ink);
+  display:block;
+}
+.about-bio{
+  padding:54px 32px;
+}
+.about-bio .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;display:block}
+.about-bio h2{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,4.5vw,4rem);line-height:.88;text-transform:uppercase;letter-spacing:-.035em;margin-bottom:30px}
+.about-bio h2 em{font-style:normal;color:var(--accent)}
+.about-bio p{font-size:16px;line-height:1.55;color:var(--ink-2);margin-bottom:18px;max-width:560px}
+.about-bio p b{color:var(--ink)}
+.sig{margin-top:30px;font-family:'Archivo Black',sans-serif;font-size:18px;text-transform:uppercase;letter-spacing:-.02em}
+.sig small{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--ink-3);font-weight:500;margin-top:6px}
+
+@media(max-width:980px){
+  .about{grid-template-columns:1fr}
+  .about-img-wrap{border-right:0;border-bottom:1px solid var(--ink);padding:32px}
+  .about-bio{padding:40px 32px}
+}
+@media(max-width:520px){
+  .about-img-wrap{padding:24px 16px}
+  .about-bio{padding:32px 16px}
+}
+
+/* ===== CTA / QUOTE ===== */
+.cta{
+  background:var(--ink);color:var(--paper);
+  border-top:1px solid var(--ink);
+}
+.cta-grid{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+}
+.cta-l{padding:64px 32px 50px;border-right:1px solid var(--ink-3);display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.cta-l .lbl{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.cta-l h2{font-family:'Archivo Black',sans-serif;font-size:clamp(2.6rem,7vw,6rem);text-transform:uppercase;letter-spacing:-.04em;line-height:.85;margin-top:14px}
+.cta-l h2 em{font-style:normal;color:var(--accent)}
+.cta-l .pitch{font-size:16px;line-height:1.55;color:#c8c8c2;max-width:480px;margin-top:18px}
+.cta-info{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ink-3);margin-top:30px}
+.cta-info > div{background:var(--ink);padding:18px 0}
+.cta-info dt{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.cta-info dd{font-family:'Archivo Black',sans-serif;font-size:18px;letter-spacing:-.01em}
+
+.cta-r{padding:64px 32px 50px}
+.cta-r .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.cta-r h3{font-family:'Archivo Black',sans-serif;font-size:24px;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:24px}
+.form{display:grid;gap:1px;background:var(--ink-3);border:1px solid var(--ink-3)}
+.field{background:var(--ink);padding:0;display:grid;grid-template-columns:120px 1fr;align-items:stretch}
+.field label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding:16px 14px;border-right:1px solid var(--ink-3);display:flex;align-items:center;background:#1a1a1a}
+.field input,.field select,.field textarea{
+  background:var(--ink);color:var(--paper);
+  border:0;outline:0;
+  padding:16px 14px;
+  font-family:'JetBrains Mono',monospace;font-size:13px;
+  width:100%;
+}
+.field input:focus,.field select:focus,.field textarea:focus{background:#1c1c1c;color:var(--accent)}
+.field textarea{min-height:90px;resize:vertical;font-family:'Inter',sans-serif;letter-spacing:0;text-transform:none}
+.cta-r .submit{
+  margin-top:1px;
+  width:100%;
+  padding:22px 24px;
+  background:var(--accent);color:var(--paper);
+  border:0;cursor:pointer;
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;
+  transition:background .15s;
+}
+.cta-r .submit:hover{background:var(--paper);color:var(--ink)}
+.cta-r .fineprint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:14px;text-align:right}
+@media(max-width:980px){.cta-grid{grid-template-columns:1fr}.cta-l{border-right:0;border-bottom:1px solid var(--ink-3)}}
+@media(max-width:520px){.field{grid-template-columns:1fr}.field label{border-right:0;border-bottom:1px solid var(--ink-3);padding:10px 14px}.cta-l,.cta-r{padding:40px 18px}}
+
+/* ===== FOOTER ===== */
+footer{
+  background:var(--paper);
+  border-top:2px solid var(--ink);
+}
+.foot-marquee{
+  background:var(--ink);color:var(--paper);
+  padding:14px 0;
+  overflow:hidden;
+  border-bottom:1px solid var(--ink);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  white-space:nowrap;
+  width:100%;
+}
+.foot-marquee .track{display:inline-flex;gap:48px;animation:marq 36s linear infinite}
+.foot-marquee span i{color:var(--accent);font-style:normal;margin:0 14px}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.foot-grid{
+  max-width:1440px;margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:0;
+}
+.foot-grid > div{padding:36px 24px;border-right:1px solid var(--ink)}
+.foot-grid > div:last-child{border-right:0}
+.foot-grid h5{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:18px}
+.foot-grid ul{list-style:none}
+.foot-grid li{padding:6px 0;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.foot-grid li a:hover{color:var(--accent)}
+.foot-brand{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.foot-brand img{height:48px}
+.foot-brand .nm{font-family:'Archivo Black',sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:-.01em}
+.foot-brand .nm small{display:block;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:9px;letter-spacing:.18em;color:var(--ink-3);margin-top:5px}
+.foot-grid p{font-size:12px;line-height:1.5;color:var(--ink-2)}
+.foot-bar{
+  border-top:1px solid var(--ink);
+  display:flex;justify-content:space-between;
+  padding:14px 24px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+}
+@media(max-width:980px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid > div:nth-child(2){border-right:0}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}.foot-grid > div{border-right:0;border-bottom:1px solid var(--ink)}.foot-bar{flex-direction:column;gap:8px}}
+
+</style>
+</head>
+<body>
+
+<!-- ===== METADATA STRIP ===== -->
+<div class="strip">
+  <div class="left">
+    <span><span class="blink"></span>Family Owned &middot; Salt Lake &amp; Utah County</span>
+  </div>
+  <div class="right">
+    <span class="hide-sm">Mon&ndash;Sat 7am&ndash;6pm</span>
+    <span class="div hide-sm">|</span>
+    <span>+1 (385) 377-7537</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="68869ed879319256ca2ddb5d.png" alt="Berry Home Improvements">
+      <span class="bn">Berry Home<br>Improvements<small>EST. 2017 — UTAH</small></span>
+    </a>
+    <nav class="nav-mid">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#specs">Specifications</a>
+      <a href="#styles">Styles</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="#quote" class="nav-cta"><span class="dot"></span>Get Free Assessment <span class="arr">&rarr;</span></a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-main">
+      <div class="hero-tag">
+        <span>Window Replacement &amp; Installation</span>
+      </div>
+
+      <h1>
+        Windows<br>
+        Built<br>
+        For <em>Utah</em>
+      </h1>
+
+      <p class="hero-lede">
+        <b>Berry Home Improvements</b> engineers replacement windows that survive Wasatch winters, summer UV, and 40-year mortgages. Premium frames. Triple-pane glass packages. Single-crew installation, sealed and certified the same day.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#quote" class="btn">Request Assessment <span class="arr">&rarr;</span></a>
+        <a href="tel:+13853777537" class="btn ghost">+1 (385) 377-7537 <span class="arr">&#9990;</span></a>
+      </div>
+
+      <dl class="hero-meta">
+        <div><dt>Lead Time</dt><dd>2&ndash;4<small>weeks measure-to-install</small></dd></div>
+        <div><dt>U-Factor</dt><dd>0.18<small>triple-pane low-E spec</small></dd></div>
+        <div><dt>Warranty</dt><dd>20yr<small>frame &amp; seal coverage</small></dd></div>
+      </dl>
+    </div>
+
+    <aside class="hero-side">
+      <div class="hero-side-head">
+        <span>Triple-Pane Profile</span>
+        <span>Energy-Star</span>
+      </div>
+      <div class="window-illo">
+        <div class="window-pane"></div>
+        <div class="window-pane"></div>
+        <div class="window-pane"></div>
+        <div class="window-pane"></div>
+        <div class="spec-call spec-1">U-FACTOR <span class="v">0.18</span></div>
+        <div class="spec-call spec-2">SHGC <span class="v">0.21</span></div>
+        <div class="spec-call spec-3">[ TRIPLE-PANE / ARGON-FILLED ]</div>
+      </div>
+      <dl class="hero-side-foot">
+        <div><dt>Frame</dt><dd>FIBREX</dd></div>
+        <div><dt>Glazing</dt><dd>3-PANE</dd></div>
+        <div><dt>Spacer</dt><dd>WARM-EDGE</dd></div>
+        <div><dt>Rating</dt><dd>ENERGY-STAR</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== SPEC TABLE ===== -->
+<section id="specs">
+  <div class="sec-head">
+    <div class="num">02</div>
+    <div>
+      <span class="lbl">Glazing Specifications</span>
+      <h2>Performance,<br>Plotted<br>Per Pane.</h2>
+    </div>
+  </div>
+  <div class="spec-wrap">
+    <div class="spec-table">
+      <div class="h">Configuration</div>
+      <div class="h">U-Factor</div>
+      <div class="h">SHGC</div>
+      <div class="h">VT</div>
+      <div class="h">Sound (STC)</div>
+
+      <div class="name">Double-Pane Standard</div>
+      <div class="v">0.30</div>
+      <div>0.27</div>
+      <div>0.51</div>
+      <div>27</div>
+
+      <div class="name">Double-Pane Low-E + Argon</div>
+      <div class="v">0.24</div>
+      <div>0.22</div>
+      <div>0.49</div>
+      <div>30</div>
+
+      <div class="name">Triple-Pane Low-E + Argon</div>
+      <div class="v">0.18</div>
+      <div>0.21</div>
+      <div>0.46</div>
+      <div>34</div>
+
+      <div class="name">Laminated Acoustic Pkg.</div>
+      <div class="v">0.22</div>
+      <div>0.23</div>
+      <div>0.48</div>
+      <div>38</div>
+
+      <div class="name">Impact / Tempered Series</div>
+      <div class="v">0.26</div>
+      <div>0.20</div>
+      <div>0.44</div>
+      <div>32</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAPABILITIES ===== -->
+<section id="capabilities">
+  <div class="sec-head">
+    <div class="num">03</div>
+    <div>
+      <span class="lbl">What We Do</span>
+      <h2>Four Disciplines.<br>One Crew.</h2>
+    </div>
+  </div>
+  <div class="caps">
+    <article class="cap">
+      <span class="ch crosshair ch-tl"></span><span class="ch crosshair ch-tr"></span><span class="ch crosshair ch-bl"></span><span class="ch crosshair ch-br"></span>
+      <span class="id"><span class="dot"></span>01</span>
+      <img src="cap-1.png" alt="Window Replacement" class="cap-img">
+      <h3>Full Window Replacement</h3>
+      <p>Tear-out of failed sashes and frames down to the rough opening. Re-flash, re-insulate, install new units, and seal — all inside a single visit.</p>
+      <ul>
+        <li>Single-Hung <b>&#10003;</b></li>
+        <li>Double-Hung <b>&#10003;</b></li>
+        <li>Casement <b>&#10003;</b></li>
+        <li>Bay / Bow <b>&#10003;</b></li>
+      </ul>
+    </article>
+    <article class="cap">
+      <span class="ch crosshair ch-tl"></span><span class="ch crosshair ch-tr"></span><span class="ch crosshair ch-bl"></span><span class="ch crosshair ch-br"></span>
+      <span class="id"><span class="dot"></span>02</span>
+      <img src="cap-2.png" alt="New Construction" class="cap-img">
+      <h3>New Construction Installs</h3>
+      <p>Nail-fin units installed during framing, integrated with house wrap and flashing tape. Coordinated with GCs across the Wasatch Front.</p>
+      <ul>
+        <li>Nail-Fin Units <b>&#10003;</b></li>
+        <li>Block Frame <b>&#10003;</b></li>
+        <li>Flashing Spec <b>&#10003;</b></li>
+        <li>GC Coordination <b>&#10003;</b></li>
+      </ul>
+    </article>
+    <article class="cap">
+      <span class="ch crosshair ch-tl"></span><span class="ch crosshair ch-tr"></span><span class="ch crosshair ch-bl"></span><span class="ch crosshair ch-br"></span>
+      <span class="id"><span class="dot"></span>03</span>
+      <img src="cap-3.png" alt="Energy Retrofits" class="cap-img">
+      <h3>Energy-Efficient Retrofits</h3>
+      <p>Low-E coatings, argon fill, warm-edge spacers, and triple-pane glazing packages. Spec'd against your monthly utility curve, not a brochure.</p>
+      <ul>
+        <li>Low-E III <b>&#10003;</b></li>
+        <li>Argon / Krypton <b>&#10003;</b></li>
+        <li>Triple-Pane <b>&#10003;</b></li>
+        <li>UV Block 95% <b>&#10003;</b></li>
+      </ul>
+    </article>
+    <article class="cap">
+      <span class="ch crosshair ch-tl"></span><span class="ch crosshair ch-tr"></span><span class="ch crosshair ch-bl"></span><span class="ch crosshair ch-br"></span>
+      <span class="id"><span class="dot"></span>04</span>
+      <img src="cap-4.png" alt="Custom Glass" class="cap-img">
+      <h3>Custom & Architectural Glass</h3>
+      <p>Arched, geometric, and oversized units sourced from US fabricators. Designer profiles, divided lites, hardware finishes — engineered to spec.</p>
+      <ul>
+        <li>Arched / Round <b>&#10003;</b></li>
+        <li>Picture Walls <b>&#10003;</b></li>
+        <li>Grilles / SDL <b>&#10003;</b></li>
+        <li>Custom Color <b>&#10003;</b></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section>
+  <div class="sec-head">
+    <div class="num">04</div>
+    <div>
+      <span class="lbl">Track Record</span>
+      <h2>The Numbers,<br>Unedited.</h2>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <div class="n">427<sup>+</sup></div>
+      <div class="l">Windows Installed</div>
+      <div class="b">Across single-family residences in Salt Lake & Utah Counties since 2017.</div>
+    </div>
+    <div class="stat">
+      <div class="n">9<sup>YR</sup></div>
+      <div class="l">In Operation</div>
+      <div class="b">Family-owned. Same lead installer on every project — no rotating subcontractors.</div>
+    </div>
+    <div class="stat">
+      <div class="n">38<sup>%</sup></div>
+      <div class="l">Avg. Heating Drop</div>
+      <div class="b">Recorded among triple-pane retrofit clients across one full Utah heating cycle.</div>
+    </div>
+    <div class="stat">
+      <div class="n">5.0<sup>&#9733;</sup></div>
+      <div class="l">120+ Reviews</div>
+      <div class="b">Verified on Google Local. Read every one — we read them too, every Monday.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STYLES CATALOG ===== -->
+<section id="styles">
+  <div class="sec-head">
+    <div class="num">05</div>
+    <div>
+      <span class="lbl">Style Catalog</span>
+      <h2>Twelve Profiles.<br>Pick Your Pane.</h2>
+    </div>
+  </div>
+  <div class="catalog">
+    <!-- 12 windows -->
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="6" y1="36" x2="54" y2="36" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-01</span><span class="nm">Double<br>Hung</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="30" y1="6" x2="30" y2="66" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-02</span><span class="nm">Casement<br>Pair</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-03</span><span class="nm">Picture<br>Fixed</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="6" y1="50" x2="54" y2="50" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-04</span><span class="nm">Awning<br>Top</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="6" y1="36" x2="54" y2="36" stroke="#0A0A0A" stroke-width="2"/><line x1="30" y1="6" x2="30" y2="66" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-05</span><span class="nm">Sliding<br>Twin</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><path d="M6 30 Q30 6 54 30 L54 66 L6 66 Z" fill="none" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-06</span><span class="nm">Arched<br>Top</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="20" y1="6" x2="20" y2="66" stroke="#0A0A0A" stroke-width="2"/><line x1="40" y1="6" x2="40" y2="66" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-07</span><span class="nm">Bay<br>3-Lite</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><circle cx="30" cy="36" r="24" fill="none" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-08</span><span class="nm">Round<br>Accent</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="6" y1="26" x2="54" y2="26" stroke="#0A0A0A" stroke-width="2"/><line x1="6" y1="46" x2="54" y2="46" stroke="#0A0A0A" stroke-width="2"/><line x1="30" y1="6" x2="30" y2="66" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-09</span><span class="nm">Grille<br>SDL</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="20" fill="none" stroke="#0A0A0A" stroke-width="2"/><rect x="6" y="32" width="48" height="34" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="30" y1="32" x2="30" y2="66" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-10</span><span class="nm">Transom<br>Combo</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><polygon points="6,66 6,18 30,6 54,18 54,66" fill="none" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-11</span><span class="nm">Geometric<br>Cottage</span></a>
+    <a class="style"><div class="style-svg"><svg viewBox="0 0 60 72" width="100%" height="100%"><rect x="6" y="6" width="48" height="60" fill="none" stroke="#0A0A0A" stroke-width="2"/><line x1="20" y1="6" x2="20" y2="66" stroke="#0A0A0A" stroke-width="2"/><line x1="40" y1="6" x2="40" y2="66" stroke="#0A0A0A" stroke-width="2"/><line x1="6" y1="36" x2="54" y2="36" stroke="#0A0A0A" stroke-width="2"/></svg></div><span class="lbl">A-12</span><span class="nm">Picture<br>Wall</span></a>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process">
+  <div class="sec-head">
+    <div class="num">06</div>
+    <div>
+      <span class="lbl">Our Process</span>
+      <h2>Five Steps.<br>No Surprises.</h2>
+    </div>
+  </div>
+  <div class="process">
+    <div class="step">
+      <div class="stnum">01<sup>/05</sup></div>
+      <h4>Free Assessment</h4>
+      <p>Brady walks every opening, photographs every frame, and audits flashing &amp; sill condition. No sales pressure, no upsells.</p>
+      <div class="est">EST. 45 MIN ON-SITE</div>
+    </div>
+    <div class="step">
+      <div class="stnum">02<sup>/05</sup></div>
+      <h4>Spec & Quote</h4>
+      <p>Itemized quote: frame, glazing package, hardware, flashing, disposal. Line by line. No bundles, no asterisks.</p>
+      <div class="est">DELIVERED &lt; 48HR</div>
+    </div>
+    <div class="step">
+      <div class="stnum">03<sup>/05</sup></div>
+      <h4>Order & Measure</h4>
+      <p>Final field measurements taken twice. Units fabricated to spec by US-based manufacturers. Tracked by serial number.</p>
+      <div class="est">FAB. 14&ndash;21 DAYS</div>
+    </div>
+    <div class="step">
+      <div class="stnum">04<sup>/05</sup></div>
+      <h4>Install Day</h4>
+      <p>Old units removed, openings re-flashed and insulated, new windows shimmed, sealed, and air-tested before trim goes back on.</p>
+      <div class="est">8 WIN. / 1 DAY</div>
+    </div>
+    <div class="step">
+      <div class="stnum">05<sup>/05</sup></div>
+      <h4>Sign-Off & Warranty</h4>
+      <p>Walk-through with the homeowner, hardware demo, warranty registration, and a written certificate. Site swept on the way out.</p>
+      <div class="est">20-YR COVERAGE</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="reviews">
+  <div class="sec-head">
+    <div class="num">07</div>
+    <div>
+      <span class="lbl">Reviews</span>
+      <h2>What Homeowners<br>Actually Say.</h2>
+    </div>
+  </div>
+  <div class="tests">
+    <div class="test">
+      <div class="quote">&ldquo;</div>
+      <p>Brady measured fourteen windows, gave us an itemized quote the next morning, and his crew finished the install in a single day. Our gas bill dropped immediately — and the house is noticeably quieter from the freeway.</p>
+      <div class="who">
+        <div>
+          <div class="nm">Mike Anderson</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="meta">SANDY, UT<br>14 WINDOWS</div>
+      </div>
+    </div>
+    <div class="test">
+      <div class="quote">&ldquo;</div>
+      <p>We had three other contractors quote us. Brady was the only one who actually inspected the flashing and explained why the originals were leaking. Triple-pane retrofit, finished clean, no surprise charges.</p>
+      <div class="who">
+        <div>
+          <div class="nm">Sarah Martinez</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="meta">PROVO, UT<br>22 WINDOWS</div>
+      </div>
+    </div>
+    <div class="test">
+      <div class="quote">&ldquo;</div>
+      <p>Used Berry for the rental property and then again for our own home. Same lead installer both times. Same care. Hard to find that anymore — most outfits send a different sub every visit.</p>
+      <div class="who">
+        <div>
+          <div class="nm">David Thompson</div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <div class="meta">DRAPER, UT<br>2 PROPERTIES</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="sec-head">
+    <div class="num">08</div>
+    <div>
+      <span class="lbl">About</span>
+      <h2>Family-Run.<br>Pane By Pane.</h2>
+    </div>
+  </div>
+  <div class="about">
+    <div class="about-img-wrap">
+      <img src="688d4e11fe5e1b0cf51bf9c2.jpeg" alt="The Berry Family" class="about-img">
+    </div>
+    <div class="about-bio">
+      <span class="lbl">From the Owner</span>
+      <h2>I'm <em>Brady Berry</em>.<br>I install every<br>window myself.</h2>
+      <p>Berry Home Improvements isn't a call center routing your project to whoever's free. It's <b>my truck, my crew, and my measuring tape.</b> When you book an assessment, I'm the one walking your property.</p>
+      <p>We focus on windows because they're the single biggest energy leak in most Utah homes — and because I refuse to be the contractor who promises eight trades and masters none.</p>
+      <p>If your sashes are foggy, your sills are rotting, or your January gas bill is climbing, let's spec a fix together. No pressure, no bundles, no ghosting.</p>
+      <div class="sig">— BRADY BERRY<br><small>FOUNDER / LEAD INSTALLER</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA / QUOTE ===== -->
+<section class="cta" id="quote">
+  <div class="cta-grid">
+    <div class="cta-l">
+      <div>
+        <span class="lbl">Free Quote</span>
+        <h2>Book Your<br>Free <em>Window<br>Assessment.</em></h2>
+        <p class="pitch">45 minutes on-site. Brady inspects every opening, photographs problem frames, and follows up with an itemized written quote — usually inside 48 hours. No deposits, no high-pressure tactics, no ghosting.</p>
+      </div>
+      <dl class="cta-info">
+        <div><dt>Direct Line</dt><dd>+1 (385) 377-7537</dd></div>
+        <div><dt>Service Area</dt><dd>SLC + UT County</dd></div>
+        <div><dt>Hours</dt><dd>MON&ndash;SAT 7&ndash;6</dd></div>
+        <div><dt>Response</dt><dd>&lt; 24 HOURS</dd></div>
+      </dl>
+    </div>
+    <div class="cta-r">
+      <span class="lbl">Request Form</span>
+      <h3>Tell Us About Your Project</h3>
+      <form class="form" onsubmit="event.preventDefault(); this.querySelector('.submit').textContent='&#10003; SENT — WE WILL CALL WITHIN 24HR';">
+        <div class="field">
+          <label for="f-name">[01] Name</label>
+          <input id="f-name" type="text" required placeholder="FULL NAME">
+        </div>
+        <div class="field">
+          <label for="f-phone">[02] Phone</label>
+          <input id="f-phone" type="tel" required placeholder="(801) 555-0000">
+        </div>
+        <div class="field">
+          <label for="f-email">[03] Email</label>
+          <input id="f-email" type="email" required placeholder="YOU@DOMAIN.COM">
+        </div>
+        <div class="field">
+          <label for="f-zip">[04] Zip</label>
+          <input id="f-zip" type="text" required placeholder="84020">
+        </div>
+        <div class="field">
+          <label for="f-count">[05] Window Qty</label>
+          <select id="f-count" required>
+            <option value="">&mdash; SELECT &mdash;</option>
+            <option>1&ndash;3 WINDOWS</option>
+            <option>4&ndash;9 WINDOWS</option>
+            <option>10&ndash;19 WINDOWS</option>
+            <option>20+ / WHOLE HOUSE</option>
+            <option>NEW CONSTRUCTION</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-notes">[06] Notes</label>
+          <textarea id="f-notes" placeholder="Tell us about the project — fogged seals, rot, energy goals, target date…"></textarea>
+        </div>
+        <button class="submit" type="submit">Send Request <span>&rarr;</span></button>
+      </form>
+      <div class="fineprint">We never share contact data &middot; spam-free since 2017</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-marquee">
+    <div class="track">
+      <span>BERRY HOME IMPROVEMENTS<i>&#x25A0;</i>WINDOW SPECIALIST<i>&#x25A0;</i>SALT LAKE COUNTY<i>&#x25A0;</i>UTAH COUNTY<i>&#x25A0;</i>FAMILY OWNED EST. 2017<i>&#x25A0;</i>20-YEAR WARRANTY<i>&#x25A0;</i>ENERGY-STAR CERTIFIED<i>&#x25A0;</i>LIC. + INSURED<i>&#x25A0;</i></span>
+      <span>BERRY HOME IMPROVEMENTS<i>&#x25A0;</i>WINDOW SPECIALIST<i>&#x25A0;</i>SALT LAKE COUNTY<i>&#x25A0;</i>UTAH COUNTY<i>&#x25A0;</i>FAMILY OWNED EST. 2017<i>&#x25A0;</i>20-YEAR WARRANTY<i>&#x25A0;</i>ENERGY-STAR CERTIFIED<i>&#x25A0;</i>LIC. + INSURED<i>&#x25A0;</i></span>
+    </div>
+  </div>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">
+        <img src="68869ed879319256ca2ddb5d.png" alt="BHI">
+        <div class="nm">Berry Home<br>Improvements<small>WINDOW DIVISION / EST. 2017</small></div>
+      </div>
+      <p>Family-owned window replacement and installation specialist serving Salt Lake & Utah Counties. Brady Berry, founder & lead installer.</p>
+    </div>
+    <div>
+      <h5>[ Capabilities ]</h5>
+      <ul>
+        <li><a href="#capabilities">Replacement Windows</a></li>
+        <li><a href="#capabilities">New Construction</a></li>
+        <li><a href="#capabilities">Energy Retrofits</a></li>
+        <li><a href="#capabilities">Custom & Architectural</a></li>
+        <li><a href="#styles">Style Catalog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>[ Service Area ]</h5>
+      <ul>
+        <li>Salt Lake City</li>
+        <li>Sandy &middot; Draper</li>
+        <li>Lehi &middot; Provo</li>
+        <li>Orem &middot; Pleasant Grove</li>
+        <li>+ Surrounding Areas</li>
+      </ul>
+    </div>
+    <div>
+      <h5>[ Contact ]</h5>
+      <ul>
+        <li><a href="tel:+13853777537">&#9990; +1 (385) 377-7537</a></li>
+        <li><a href="#quote">&rarr; Free Assessment</a></li>
+        <li>MON&ndash;SAT 7AM&ndash;6PM</li>
+        <li>RESPONSE &lt; 24HR</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bar">
+    <span>&copy; 2017&ndash;2026 Berry Home Improvements &middot; All rights reserved.</span>
+    <span>Licensed &amp; Insured in Utah</span>
+  </div>
+</footer>
+
+<script>
+// counter animation on stats
+(function(){
+  var stats = document.querySelectorAll('.stat .n');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target;
+      if(el.dataset.done) return;
+      el.dataset.done = '1';
+      var raw = el.textContent;
+      var m = raw.match(/^(\d+(?:\.\d+)?)/);
+      if(!m) return;
+      var target = parseFloat(m[1]);
+      var rest = raw.slice(m[1].length);
+      var dur = 1100, t0 = performance.now();
+      function tick(t){
+        var p = Math.min(1, (t - t0) / dur);
+        var v = target * (1 - Math.pow(1 - p, 3));
+        var formatted = (target % 1 === 0) ? Math.round(v).toString() : v.toFixed(1);
+        el.innerHTML = formatted + rest;
+        if(p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, {threshold:0.4});
+  stats.forEach(function(s){ io.observe(s); });
+})();
+
+</script>
+
+</body>
+</html>
